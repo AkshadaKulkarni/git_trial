@@ -1,10 +1,13 @@
 In this assignment you will design a widely used file compression technique called Huffamn Coding using binary trees and linked list, which is used in JPEG compression as well as in MP3 audio compression. The algorithm was invented by David A. Huffman in 1952 when he was a Ph.D. student at MIT
-Learning Goals :
+
+#H1 Learning Goals :
 In this assignment you will work with
-Binary tree
-Linked list
-Background
-ASCII Encoding :
+  * Binary tree
+  * Linked list
+
+#H1 Background
+
+#H2 ASCII Encoding :
 Many programming languages use ASCII (which stands for American Standard Code for Information Interchange) coding to represent characters. In ASCII coding, every character is encoded (represented) with the same number of bits (8-bits) per character. Since there are 256 different values that can be represented with 8-bits, there are potentially 256 different characters in the ASCII character set. 
 With an ASCII encoding (8 bits per character) the 13 character string "go go gophers" requires 104 bits. 
 The string "go go gophers" would be written (coded numerically) as 103 111 32 103 111 32 103 111 112 104 101 114 115. This would be written as the following stream of bits (the spaces would not be written, just the 0's and 1's) 
