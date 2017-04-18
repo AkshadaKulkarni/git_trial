@@ -63,7 +63,7 @@ Finally, the last two trees are joined into a final tree whose weight is 13, the
 The single tree left after the previous step is an optimal encoding tree.
 
 | Character | Binary code |
-| --------- |: ----------:|
+| --------- |  ---------- |
 |  '  '     |  101        | 
 |  'e'      |  1100       | 
 |  'g'      |  00         |
