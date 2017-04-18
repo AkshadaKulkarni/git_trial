@@ -24,6 +24,7 @@ To start, we have to count the occurrence of every character in the string/data 
 We'll use the string "go go gophers" as an example. Initially we have the forest shown below. The nodes are shown with a weight/count that represents the number of times the node's character occurs. Remember each node is a tree which is pointed to by a linked list. We can represent order of the tree nodes by putting them in a linked list. Each node in the list points to the indivisual tree node. Node pointing tree node ‘e’ is the head of the list.
 
 ![Alt text](https://github.com/AkshadaKulkarni/git_trial/tree/master/pe10_pa04/project_files/ngopher1.jpg)
+![Alt text](https://i.imgur.com/Edfn4FV.jpg)
 
 We maintain ordered list of items arranged according to their weights. If the two nodes of the list have same weight, a leaf node(associated with an ASCII character) is ordered first. If both nodes are leaf nodes, they are ordered according to their ASCII coding. If both nodes are non-leaf nodes, they are ordered according to the creation times of the nodes.
 
