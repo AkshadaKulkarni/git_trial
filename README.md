@@ -23,45 +23,47 @@ To start, we have to count the occurrence of every character in the string/data 
 ### Example :
 We'll use the string "go go gophers" as an example. Initially we have the forest shown below. The nodes are shown with a weight/count that represents the number of times the node's character occurs. Remember each node is a tree which is pointed to by a linked list. We can represent order of the tree nodes by putting them in a linked list. Each node in the list points to the indivisual tree node. Node pointing tree node ‘e’ is the head of the list.
 
-![Alt text](https://github.com/AkshadaKulkarni/git_trial/tree/master/pe10_pa04/project_files/ngopher1.jpg)
-![Alt text](http://i.imgur.com/Edfn4FV.jpg)
+![gophers1.jpg](http://i.imgur.com/Edfn4FV.jpg)
 
 We maintain ordered list of items arranged according to their weights. If the two nodes of the list have same weight, a leaf node(associated with an ASCII character) is ordered first. If both nodes are leaf nodes, they are ordered according to their ASCII coding. If both nodes are non-leaf nodes, they are ordered according to the creation times of the nodes.
-
 
 We always pick the first two items in the list, here, nodes for characters 'e' and 'h'. We create a new tree whose root is weighted by the sum of the weights chosen. Although the newly created node has the same weight as Space, it is ordered after Space in the list because Space is an ASCII character. 
  
 
+![gophers1.jpg](http://i.imgur.com/ESrba5k.jpg)
 
 
 Choosing the first two (minimal) nodes in the priority queue yields another tree with weight 2 as shown below. There are now six trees in the forest of trees that will eventually build an encoding tree.
-	
 
+![gophers2.jpg](http://i.imgur.com/2Hv3lSC.jpg)
 Again we must choose the first two (minimal) nodes in the priority queue. The lowest weight is the 'e'-node/tree with weight equal to 1. There are three trees with weight 2; the one chosen corresponds to an ASCII character because of the way we order the nodes in the priority queue. The new tree has a weight of 3, which will be placed last in the priority queue according to our ordering strategy.
  
 
+![gophers3.jpg](http://i.imgur.com/Frm71a5.jpg)
 
 
 Now there are two trees with weight equal to 2. These are joined into a new tree whose weight is 4. There are four trees left, one whose weight is 4 and three with a weight of 3.
 
 
+![gophers4.jpg](http://i.imgur.com/8Je9svr.jpg)
 
 The first two minimal (weight 3) trees in the priority queue are joined into a tree whose weight is 6. There are three trees left.
 
 
+![gophers5.jpg](http://i.imgur.com/XGd3VTS.jpg)
+
 The minimal trees have weights of 3 and 4; these are joined into a tree with weight 7.
 
 
+![gophers6.jpg](http://i.imgur.com/i8e7HiQ.jpg)
 
 
+Finally, the last two trees are joined into a final tree whose weight is 13, the sum of the two weights 6 and 7. This tree is the tree we used to illustrate Huffman coding above.
 
+![gophers7.jpg](http://i.imgur.com/ZEQ9KVM.jpg)
 
+Note that you can easily come up with an alternative optimal tree by using a different ordering strategy to order trees of the same weights. In that case, the bit patterns for each character are different, but the total number of bits used to encode "go go gophers" is the same. 
 
-Finally, the last two trees are joined into a final tree whose weight is 13, the sum of the two weights 6 and 7. This tree is the tree we used to illustrate Huffman coding above. Note that you can easily come up with an alternative optimal tree by using a different ordering strategy to order trees of the same weights. In that case, the bit patterns for each character are different, but the total number of bits used to encode "go go gophers" is the same. 
-
-
-
-The single tree left after the previous step is an optimal encoding tree.
 
 | Character | Binary code |
 | --------- |  ---------- |
